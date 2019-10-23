@@ -37,8 +37,7 @@
                 }
               
                 array_push($newarray, $newarrayD, $newarrayT);
-                echo '<div style="height:330px;"><div class="patchart" style="width: 300px; float:left; height:200px; margin:10px">Here are the stats of your exercises:                                       <br/></div>';
-                echo '<script type="text/javascript">graphbar('.json_encode($newarray).');</script>';
+            
                 $psql="SELECT username FROM User WHERE userID = {$row[0]['User_IDmed']}";
                 $medUsername = $db->query($psql)->fetch_object()->username; 
                 for ($x = 0; $x < sizeof($row); $x++) {
@@ -54,9 +53,11 @@
                 $medicine =$db->query($psql)->fetch_object()->name; 
 
         
-                $html = '<div style="width: 500px; float:left; height:300px; margin:10px"><h4 align="left">Dr. '.$medUsername.'                                  recommends '.$therapy.'* for you.</h4>
-                            <p align="left">*&nbsp;'.$medicine.' with '.$dosage.' dosage</p></div>';
+                $html = '<div><h4 align="left">Dr. '.$medUsername.' recommends '.$therapy.'* for you.</h4>
+                            <p align="left">*&nbsp;'.$medicine.' with '.$dosage.' dosage</p></div><br/><br/>';
                 echo $html;
+                echo '<div class="patchart">Here are the stats of your exercises:<br/></div>';
+                echo '<script type="text/javascript">graphbar('.json_encode($newarray).');</script>';
                 }
             }
             else
