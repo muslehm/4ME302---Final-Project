@@ -32,7 +32,8 @@ div#mainb
      }
      div#mainb h2
      {font-family:Verdana, Geneva, Tahoma, sans-serif;}
-
+div.patchart {
+    margin:10px;}
 div.wrapper {
     
             text-align: center;
@@ -44,6 +45,12 @@ div#signi {
             width: 250px;
             display: inline-block;
             color: darkslategray;
+        }
+div.rtherapy {
+            width: 500px;
+          
+            height:300px;
+            margin:10px;
         }
 
 div#signo{
