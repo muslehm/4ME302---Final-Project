@@ -1,6 +1,6 @@
  <?php
 
-$apikey = 'AIzaSyBKQzeZeULXfAW79RGhpFYiw6q7irSwJjU';
+$apikey = '';
  
 $arr_list = array();
 $db = new myDB;
