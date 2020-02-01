@@ -11,8 +11,8 @@ class GoogleAuth
      $this->db = $db;
      $this->client = $gClient;
 
-     $this->client->setClientID('450337897013-ttdq3522onvsbev4qe1m46sfn4ap9f7v.apps.googleusercontent.com');
-     $this->client->setClientSecret('xwxKL5ruGZ5obgDQT_aNxeuV');
+     $this->client->setClientID('');
+     $this->client->setClientSecret('');
      $this->client->setRedirectUri('http://musleh.epizy.com/google/login.php');
      $this->client->setScopes('email');
  
